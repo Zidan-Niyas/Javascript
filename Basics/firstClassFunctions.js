@@ -18,9 +18,9 @@ b();
 
 
 // anonymous functions(used when functions act as values)
-function () {   // syntaxError
-    console.log("cannot be called ;( ");
-}
+// function () {   // syntaxError
+//     console.log("cannot be called ;( ");
+// }
 
 
 // named function expression
@@ -38,4 +38,11 @@ var d = function (param1, param2) {  // param1 & param2 are the local variables/
 d(1, 2);    // 1 & 2 are arguments
 
 
-// First Class Functions
+// FIRST CLASS FUNCTIONS - the ability of functions to act as values that can be returned or passed
+// as arguments to other functions are called first class functions
+var e = function () {
+    return function xyz() {  // xyz() is the first class fn.
+        console.log("First class function called!");
+    }
+}
+console.log(e());
