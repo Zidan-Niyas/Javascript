@@ -1,0 +1,13 @@
+WEB APIs (not a part of javascript, it is in the browser)
+
+- global scope of web api ---> window
+- eg: window.setTimeout(), window.localStorage, window.console.log
+- As window is in the global scope, window.console.log is same as console.log
+
+- Different superpowers of WEB APIs:  
+  1) setTimeout() [timer]
+  2) DOM APIs [document.getElementByid, document.addEventListener]
+  3) Fetch() 
+  4) localStorage
+  5) console [console.log]
+  6) location [https://www]
