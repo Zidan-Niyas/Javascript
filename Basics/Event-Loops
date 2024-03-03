@@ -1,0 +1,31 @@
+EVENT LOOP & CALLBACK QUEUE
+- when a callback function is called after setting a timer(using setTimeout()), when the timer expires the callback function is
+  put into the 'CALLBACK QUEUE'.
+- EVENT LOOP : continuously monitors the call stack & callback queue.If the call stack is empty, the callback functions in the callback
+               queue are scheduled to be executed by putting into the call stack
+- the 'EVENT LOOP' acts as a gatekeeper that checks if anything is present in the CALLBACK QUEUE and pushes it into the call stack. 
+  The call stack then quickly executes the callback function by creating an execution context and executing the function.
+
+
+MICROTASK QUEUE
+- MICROTASK QUEUE - contains promises
+- CALLBACK QUEUE - contains all callbacks like timers, dom apis(eventListeners) etc.
+- microtask queue has higher priority.
+- callback functions that are promises go into the microtask queue.
+- EVENT LOOP --> once the call stack is empty, the callback functions inside the microtask queue is pushed into the call stack first
+                 and once this finishes executing, the callback functions inside the callback queue are pushed into the call stack
+                 ie; the event loop gives the microstask queue higher priority than the callback queue 
+
+- eg: setTimeout(function cbT() {
+        console.log("CB Timeout");
+      },5000);
+
+      fetch("https://api.netflix.com"
+      .then(function cbF() {
+      console.log("Got Netflix data from URL");
+      });
+
+- In the above example, cbF() goes into the microtask queue after waiting for the data from the netflix api is recieved.
+  In this case the fetch web api function initialises a promise called cbF() which is pushed into the callstack through
+  the microtask queue.ie; the callback function inside the microtask queue (fetch) is executed first by the event loop
+- The function cbT() which is the timer goes into the callback queue after the timer expires.
