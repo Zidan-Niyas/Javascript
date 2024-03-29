@@ -1,14 +1,8 @@
 const arr = [5, 1, 2, 3, 6];
 
-//----------- FILTERS CAN BE IMPLEMENTED IN 3 WAYS -----------------//
-// Greater than 4 filter using 1st way
-function isGreater(x) {
-    return x > 4;
-}
-const output1 = arr.filter(isGreater);
-console.log(output1);
+//----------- 2 WAYS OF USING FILTER -----------------//
 
-// Odd filter using 2nd way
+// Odd filter 
 const output2 = arr.filter(function isOdd(x) {
     return x % 2 !== 0;
 });
