@@ -7,6 +7,7 @@ const users = [
     { firstName: "Mohammed", lastName: "Shafeeh", age: "20" },
 ];
 
+// MAP
 const output = users.map((x) => x.firstName + " " + x.lastName);
 console.log(output);
 // OUTPUT = ['Zidan Niyas', 'Aswanth Mahesh', 'Arjun K', 'Mohammed Shafeeh']
@@ -17,7 +18,7 @@ const output2 = users.filter((x) => x.age > 20)
 console.log(output2);
 // OUTPUT = ['Zidan', 'Aswanth', 'Arjun']
 
-
+// REDUCE
 const output3 = users.reduce(function (acc, current) {
     if (acc[current.age]) {
         acc[current.age] = ++acc[current.age];
@@ -30,7 +31,7 @@ const output3 = users.reduce(function (acc, current) {
 console.log(output3);
 // OUTPUT = {20: 1, 21: 2, 22: 1}
 
-
+// REDUCE TO FIND FIRST NAME OF ALL USERS WITH AGE > 20
 const taskOutput = users.reduce(function (acc, current) {
     if (current.age > 20) {
         acc.push(current.firstName);
