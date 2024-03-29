@@ -1,4 +1,4 @@
-// ------- REAL WORLD EXAMPLE OF MAP, FILTER & REDUCE --------------------//
+// ------- REAL WORLD EXAMPLE OF MAP, FILTER & REDUCE ---------------------//
 
 const users = [
     { firstName: "Zidan", lastName: "Niyas", age: "21" },
