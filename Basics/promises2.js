@@ -1,4 +1,14 @@
-// Earlier we used write code like this, which causes 'Inversion of control'
+/* 
+What is a PROMISE?
+    --> A promise is a placeholder that gets filled after an asynchronous operation
+        is executed.
+    --> A promise is a container for a future value
+    --> A promise is an object representing eventual completion of an
+        asynchronous event (MDN webdocs) 
+States of PROMISE : pending, fulfilled, rejected        
+*/
+
+// Earlier we used write code like this, which causes 'Inversion of control' (relinquishing control to another function)
 const cart = ["shirt", "pant", "shoes"];
 createOrder(cart, function (orderId) {
     proceedToPayment(orderId);
@@ -18,4 +28,4 @@ promise.then(function (orderId) {
 // So we have control of our program, the promise object WILL call the callback function 
 // if there is data inside the promise object
 
-// States of PROMISE : pending, fulfilled
+/
