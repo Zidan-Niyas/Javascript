@@ -39,3 +39,37 @@ Promise.any([p1, p2, p3]);     // First success(resolved)
 // It will wait for first resolved.
 // If p2 is rejected, it will check p3, if it is resolved(successful), val3 is taken.
 // If all are rejected, the result will be an array of all 3 errors [err1, err2, err3] ---> Aggregate error.
+
+//--------------- EXAMPLE CODE -----------------//
+Promise.all([p1, p2, p3])
+    .then((res) => {
+        console.log(res);
+    })
+    .catch((err) => {
+        console.error(err);
+    });
+// OUTPUT ---> P2 fail
+
+
+Promise.allSettled([p1, p2, p3])
+    .then((res) => {
+        console.log(res);
+    })
+    .catch((err) => {
+        console.error(err);
+    });
+/* OUTPUT :- 
+0: {status: 'fulfilled', value: 'P1 success'}
+1: {status: 'rejected', reason: 'P2 fail'}
+2: { status: 'fulfilled', value: 'P3 success' }
+*/
+
+Promise.any([p1, p2, p3])
+    .then((res) => {
+        console.log(res);
+    })
+    .catch((err) => {
+        console.error(err);
+        console.log(err.errors);
+    });
+// OUTPUT ---> ['P1 fail', 'P2 fail', 'P3 fail']
