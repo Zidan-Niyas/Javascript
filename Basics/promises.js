@@ -5,7 +5,8 @@ What is a PROMISE?
     --> A promise is a container for a future value
     --> A promise is an object representing eventual completion of an
         asynchronous event (MDN webdocs) 
-States of PROMISE : pending, fulfilled, rejected        
+States of PROMISE : fulfilled, rejected   
+Lingo : settled(result is recieved), fulfilled(success), rejected(failure)
 */
 
 // Earlier we used write code like this, which causes 'Inversion of control' (relinquishing control to another function)
