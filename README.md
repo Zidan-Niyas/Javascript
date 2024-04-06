@@ -1,4 +1,4 @@
-# ***Namaste Javascript - By Akshay Saini*** 
+# ***Namaste Javascript*** 
 
  This repository contains all that I have learned from the Namaste Javascript season 1 & season 2 playlist on Youtube.
 
