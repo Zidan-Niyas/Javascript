@@ -18,6 +18,6 @@ Let this repository act as a helping hand when going through the playlist, I hav
  * Web-APIs used with Javascript
 
    
-![Screenshot (82)](https://github.com/Zidan-Niyas/Javascript/assets/87656623/d94e77f6-8772-4193-a5ba-7872ba828bb2)
+
 
 
